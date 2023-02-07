@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>42</h1>
+		<h2>42?</h2>
+		<a href="javascript:alert('42');yes();">42</a>
+		<script>
+			let content = "";
+			setTimeout(() => document.write(content += "<h1>done!</h1>"), 42000);
+			function yes() {
+				setInterval(() => {
+					document.write(content += "42");
+				})
+			};
+
+		</script>
+	</body>
+</html>
