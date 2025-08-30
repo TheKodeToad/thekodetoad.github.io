@@ -3,7 +3,7 @@ I was a little too lazy to heavily research how the original game worked, so I e
 This should help understand how to play, or might simply be interesting. This won't be too detailed, I might as well just publish the code at that point.
 
 -- Leveling --
-The only difference between levels is speed. Each level adds .5 pixels per frame to the ball speed, the first level starting at 2px per frame.
+The only difference between levels is speed. Each level adds .3 pixels per frame to the ball speed, the first level starting at 2px per frame.
 
 -- Physics --
 There is no randomness. The ball's direction is decided when hitting the paddle, not even taking into account the previous rotation.
@@ -18,3 +18,4 @@ Hitting the:
 - blue blocks (1st and 2nd from top) will give you the least at 10 points
 
 The amount of points is multiplied by the the volley counter (number of blocks hit in between touching the paddle) which stops at 3.
+Every 15,000 points you gain a life.
