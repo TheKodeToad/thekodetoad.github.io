@@ -1,0 +1,20 @@
+-- How my breakout game works --
+I was a little too lazy to heavily research how the original game worked, so I ended up making things up.
+This should help understand how to play, or might simply be interesting. This won't be too detailed, I might as well just publish the code at that point.
+
+-- Leveling --
+The only difference between levels is speed. Each level adds .5 pixels per frame to the ball speed, the first level starting at 2px per frame.
+
+-- Physics --
+There is no randomness. The ball's direction is decided when hitting the paddle, not even taking into account the previous rotation.
+
+-- Scoring --
+Hitting the sides of the screen will award you just 2 points. Some versions punish you for touching the ceiling but I decided not to do this.
+
+Hitting the:
+- green blocks (1st and 2nd from bottom) will give you the most at 100 points
+- yellow blocks (3rd and 4th from bottom) will give you 50 points
+- red blocks (3rd 4th from top) will give you 20 points
+- blue blocks (1st and 2nd from top) will give you the least at 10 points
+
+The amount of points is multiplied by the the volley counter (number of blocks hit in between touching the paddle) which stops at 3.
