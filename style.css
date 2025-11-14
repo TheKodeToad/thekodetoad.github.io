@@ -1,0 +1,118 @@
+:root {
+    font-family: 'Noto Sans';
+
+    --desktop-window-background: #eff0f1;
+    --desktop-window-border: #b9bbbd;
+    --desktop-window-action-background: #232629;
+    --desktop-window-action-active: #a6a8ab;
+    --desktop-window-close-background: #ff98a2;
+    --desktop-window-close-active: #6d2229;
+    --desktop-window-view-background: white;
+
+    background-image: url("assets/soft-waves.svg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.desktop-window {
+    background: var(--desktop-window-view-background);
+
+    border: 1px solid var(--desktop-window-border);
+    border-radius: 6px 6px 0px 0px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 80%);
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.desktop-titlebar {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    user-select: none;
+    background: var(--desktop-window-background);
+    border-bottom: 1px solid var(--desktop-window-border);
+    font-size: 10pt;
+    padding: 4px;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.desktop-window-action {
+    width: 16px;
+    height: 16px;
+    padding: 1px;
+    border-radius: 100%;
+}
+
+.desktop-window-action:hover {
+    background: var(--desktop-window-action-background);
+}
+
+.desktop-window-action:active {
+    background: var(--desktop-window-action-active);
+}
+
+.desktop-window-close:hover {
+    background: var(--desktop-window-close-background);
+}
+
+.desktop-window-close:active {
+    background: var(--desktop-window-close-active);
+}
+
+.desktop-window-action::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.desktop-window-action:hover::after, .desktop-window-action:active::after {
+    filter: invert(1);
+}
+
+.desktop-window-minimize::after {
+    background-image: url("assets/minimize.svg");
+}
+
+.desktop-window-maximize::after {
+    background-image: url("assets/maximize.svg");
+}
+
+.desktop-window-close::after {
+    background-image: url("assets/close.svg");
+}
+
+.about-container {
+    margin: 20px;
+}
+/*.desktop-window-close:hover::after {*/
+/*    background: var(--desktop-window-close-background);*/
+/*}*/
+
+/*.desktop-window-action {*/
+/*    border-radius: 100%;*/
+/*    width: 16px;*/
+/*    height: 16px;*/
+/*}*/
+/**/
+/*.desktop-window-action:hover {*/
+/*    filter: invert(1);*/
+/*}*/
+/**/
+/*.desktop-window-action::before {*/
+/*    content: "hello";*/
+/*    position: absolute;*/
+/*    background: black;*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*}*/
